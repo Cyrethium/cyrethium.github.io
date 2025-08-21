@@ -1,54 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cyrethium - Coming Soon</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: black;
-      color: #00ffcc;
-      font-family: "Courier New", monospace;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-    }
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      animation: glow 2s infinite alternate;
-    }
-    p {
-      font-size: 1.2rem;
-      color: #aaa;
-    }
-    @keyframes glow {
-      from { text-shadow: 0 0 5px #00ffcc; }
-      to { text-shadow: 0 0 20px #00ffcc; }
-    }
-    .trailer {
-      margin-top: 2rem;
-      font-size: 1rem;
-      border: 1px solid #00ffcc;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      transition: 0.3s;
-    }
-    .trailer:hover {
-      background: #00ffcc;
-      color: black;
-      cursor: pointer;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyrethium - Privacy-Focused Operating System</title>
+    <link rel="icon" href="Assets/redlogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Cyrethium</h1>
-  <p>The Securonis Project will be moved here soon...</p>
- <div class="trailer">[ Building from Scratch. More Powerful, More Stable, More Secure ]</div>
+    <!-- Video Background -->
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="Assets/cyrethiumbackground.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-section">
+                <img src="Assets/logo.png" alt="Cyrethium Logo" class="logo">
+                <span class="logo-text">Cyrethium</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Homepage</a></li>
+                <li><a href="download.html">Download</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="docs.html">Docs</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="releases.html">Releases</a></li>
+                <li><a href="developer.html">Developer/Blog</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Cyrethium</h1>
+                <p class="slogan">DIGITAL FORTRESS FOR PRIVACY</p>
+                <p class="intro-text">
+                    A Linux distribution with no limits in privacy, security, and threat analysis.
+                    All your system traffic is routed through Tor, making exit node attacks nearly impossible.
+                    It provides both passive and active protection thanks to its advanced tools.
+                    Browse safely without leaving traces and keep your digital world under control.
+                </p>
+            </div>
+            <div class="hero-image">
+                <img src="Assets/cyrethium.jpg" alt="Cyrethium OS" class="system-image">
+            </div>
+        </div>
+    </section>
+
+  <!-- Long Intro Section -->
+<section class="section">
+    <div class="long-intro">
+        <h2>About Cyrethium</h2>
+        <p>
+            Cyrethium is a Debian-based Linux distribution focused on privacy, security, and threat analysis.<br>
+            It can route all system traffic through the Tor network with CyrethOnion; blocks non-Tor exit traffic and implements comprehensive configurations against potential data leaks.<br>
+            With the ChaoSec tool, it can manipulate network traffic to produce fake traffic, making exit node monitoring and analysis attacks much more difficult.<br><br>
+
+            Cyrethium doesn't just offer passive protection; it provides system defense capabilities with active threat detection tools.<br>
+            It includes powerful tools such as Tor node analysis, node attack detection, suspicious traffic inspection, non-Tor connection detection, and system anomaly detection.<br>
+            Users can detect and prevent potential attacks in advance with node analysis tools.<br><br>
+
+            For multi-layered anonymity, Cyrethium offers I2P network and DNSCrypt-Proxy support.<br>
+            Secure web browsing is provided with Tor and I2P supported hardened custom browsers:<br><br>
+
+            <strong>Hardened Firefox:</strong> Provides high security and stability in daily use.<br><br>
+            <strong>Amnesic Firefox:</strong> Focuses on strict privacy and security, automatically deleting all traces when closed.<br><br>
+
+            With Cyrethium Jails, every file and application can be easily sandboxed.<br>
+            Hardened kernel and system settings provide high resistance against exploits, rootkits, and trojans.<br>
+            Thanks to advanced security tools, malware can be detected and removed from the system both in daily use and in-depth technical analyses.<br><br>
+
+            The distribution offers a comprehensive privacy ecosystem with more than 40 custom-designed tools.<br>
+            Some usage traces are automatically cleaned at each system shutdown, ensuring continuous user privacy protection.
+        </p>
+    </div>
+</section>
+
+    <!-- Features Section -->
+    <section class="section">
+        <h2>Features</h2>
+        <div class="features-grid">
+            <div class="feature-box">
+                <h3>Tor Integration</h3>
+                <p>Allows forcing all system traffic to be routed through the Tor network with the CyrethOnion tool. Non-Tor traffic is rejected and potential leaks are minimized</p>
+            </div>
+            <div class="feature-box">
+                <h3>I2P Integration</h3>
+                <p>You can browse the internet anonymously with built-in I2P support and a browser with pre-configured I2P settings.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Hardened System</h3>
+                <p>The system includes many additional security settings and kernel hardening configurations. The system is highly resistant to many cyber attacks and exploits.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Balance in Daily Usage</h3>
+                <p>The hardening settings are well-balanced and their effect is barely noticeable in daily use. It provides a beautiful interface with customized MATE</p>
+            </div>
+            <div class="feature-box">
+                <h3>Custom Designed Tools</h3>
+                <p>The system contains nearly 40 custom-designed privacy, security, crypto, and threat analysis tools. Each one runs completely from source code and is embedded in the system.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Cyrethium Monero Wallet</h3>
+                <p>An easy-to-use, completely locally running Monero CLI-based wallet. It works integrated with CyrethOnion to provide crypto security.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Tor Node Security</h3>
+                <p>The system provides special tools for Tor node analysis detection. Payload attacks, suspicious nodes, node attacks, and traffic leaking outside of Tor can be detected.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Debian-based</h3>
+                <p>The system uses the highly stable and secure Debian base. It doesn't use any non-Debian repositories; all updates depend solely on Debian repositories.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Completely Open Source</h3>
+                <p>Cyrethium is completely open source and open to all kinds of audits. Every Cyrethium Project, including the website, is completely free software</p>
+            </div>
+            <div class="feature-box">
+                <h3>Browser Security</h3>
+                <p>The system uses custom-designed Hardened Firefox and Amnesic Firefox. Browser attacks are blocked at a very high rate and it's completely ad-free. Amnesic Firefox leaves no traces behind.</p>
+            </div>
+            <div class="feature-box">
+                <h3>MATE</h3>
+                <p>The system has a modern and easy-to-use MATE desktop. Cyrethium offers a pleasant interface and ease of use with its customized MATE desktop.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Network and System Security</h3>
+                <p>Cyrethium comes with many network and system security tools. Network analysis and defense can be performed, and malware and attack detection can be done on the system</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section">
+        <h2>Gallery</h2>
+        <div class="gallery-preview">
+            <p>Visit the gallery page to examine Cyrethium's screenshots and system features in detail.</p>
+            <a href="gallery.html" class="gallery-btn">View Gallery</a>
+        </div>
+    </section>
+
+    <!-- Developer Blog Section -->
+    <section class="section">
+        <div class="blog-section">
+            <h2>News</h2>
+            <p>Follow Cyrethium's development process and get information about new features and developments.</p>
+            <a href="news.html" class="blog-link">Visit News</a>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="section">
+        <div class="download-section">
+            <h2>Download Now</h2>
+            <p>Download Cyrethium today and protect your digital privacy.</p>
+            <a href="download.html" class="download-btn">Download Cyrethium</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="https://github.com/Cyrethium" target="_blank">Github</a>
+            <a href="https://www.linkedin.com/company/securonis-linux/" target="_blank">Linkedin</a>
+            <a href="#" target="_blank">Youtube</a>
+            <a href="https://distrowatch.com/securonis" target="_blank">Distrowatch</a>
+            <a href="https://x.com/root0emir" target="_blank">X</a>
+            <a href="https://discord.gg/GtJ7EgKNEb" target="_blank">Discord</a>
+        </div>
+        <p>&copy; 2025 Cyrethium. All rights reserved. The site is completely open source.</p>
+    </footer>
 </body>
 </html>
