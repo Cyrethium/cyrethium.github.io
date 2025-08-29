@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Cyrethium</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Assets/redlogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Video Background -->
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="Assets/donate.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-section">
+                <img src="Assets/logo.png" alt="Cyrethium Logo" class="logo">
+                <span class="logo-text">Cyrethium</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Homepage</a></li>
+                <li><a href="download.html">Download</a></li>
+                <li><a href="donate.html" class="active">Donate</a></li>
+                <li><a href="docs.html">Docs</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="releases.html">Releases</a></li>
+                <li><a href="developer.html">Developer/Blog</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">Support Cyrethium</h1>
+                <p class="hero-subtitle">Cyrethium exists to give you back freedom, privacy, and control. <br> This project is developed with passion and dedication by a single person. Every line of code represents hundreds of hours spent on security and privacy. <br>Your donations allow me to remain independent and pave the way for developing Cyrethium with more powerful and innovative tools.</p>
+            </div>
+        </section>
+
+        <!-- Donation Grid Section -->
+        <section class="donation-grid-section">
+            <div class="container">
+                <div class="donation-grid">
+                    <!-- Bitcoin Card -->
+                    <div class="donation-card feature-box">
+                        <div class="crypto-header">
+                            <i class="fab fa-bitcoin crypto-icon bitcoin"></i>
+                            <h3>Bitcoin</h3>
+                        </div>
+                        <div class="address-container">
+                            <code class="crypto-code" id="btc-address">bc1qrqcrrmt0lw6fxxzj2lppr5d60teqcm7fszuh0q</code>
+                            <button class="copy-btn" onclick="copyAddress('btc-address')">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Ethereum Card -->
+                    <div class="donation-card feature-box">
+                        <div class="crypto-header">
+                            <i class="fab fa-ethereum crypto-icon ethereum"></i>
+                            <h3>Ethereum</h3>
+                        </div>
+                        <div class="address-container">
+                            <code class="crypto-code" id="eth-address">0x34a909CD2691681dfe3F71D2956322A2B4D7f290</code>
+                            <button class="copy-btn" onclick="copyAddress('eth-address')">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Monero Card -->
+                    <div class="donation-card feature-box">
+                        <div class="crypto-header">
+                            <i class="fab fa-monero crypto-icon monero"></i>
+                            <h3>Monero</h3>
+                        </div>
+                        <div class="address-container">
+                            <code class="crypto-code" id="xmr-address">44CHL4A7RvsaBWhtjRbUju6CKj9QAUYVVe6E5DqJ8Frs47DLS5XTMzkWmwXegwB8BUS4aWhEdbSYv6nRsHsoMddpQDt3iAH</code>
+                            <button class="copy-btn" onclick="copyAddress('xmr-address')">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Thank You Card -->
+                    <div class="donation-card feature-box thank-you-card">
+                        <div class="thank-you-header">
+                            <i class="fas fa-heart thank-you-icon"></i>
+                            <h3>Thank You!</h3>
+                        </div>
+                        <div class="thank-you-content">
+                            <p>Your support keeps Cyrethium independent and secure.</p>
+                            <div class="privacy-badge">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Anonymous & Secure</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://github.com/cyrethium" target="_blank"> Github</a>
+                <a href="https://linkedin.com/company/securonis-linux/" target="_blank"> Linkedin</a>
+                <a href="https://youtube.com/@cyrethium" target="_blank"> Youtube</a>
+                <a href="https://distrowatch.com/securonis" target="_blank"> Distrowatch</a>
+                <a href="https://x.com/root0emir" target="_blank"> X</a>
+                <a href="https://discord.gg/GtJ7EgKNEb" target="_blank"> Discord</a>
+            </div>
+            <p>&copy; 2025 Cyrethium. All rights reserved. The site is completely open source.</p>
+        </div>
+    </footer>
+
+    <script>
+        function copyAddress(elementId) {
+            const element = document.getElementById(elementId);
+            const text = element.textContent;
+            
+            navigator.clipboard.writeText(text).then(function() {
+                // Show success feedback
+                const button = element.nextElementSibling;
+                const originalIcon = button.innerHTML;
+                button.innerHTML = '<i class="fas fa-check"></i>';
+                button.style.color = '#00ff00';
+                
+                setTimeout(function() {
+                    button.innerHTML = originalIcon;
+                    button.style.color = '';
+                }, 2000);
+            }).catch(function(err) {
+                console.error('Could not copy text: ', err);
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = text;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+            });
+        }
+    </script>
+</body>
+</html>

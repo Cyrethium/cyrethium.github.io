@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer - Cyrethium</title>
+    <link rel="icon" href="Assets/redlogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Video Background -->
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="Assets/cyrethiumbackground.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-section">
+                <img src="Assets/logo.png" alt="Cyrethium Logo" class="logo">
+                <span class="logo-text">Cyrethium</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Homepage</a></li>
+                <li><a href="download.html">Download</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="docs.html">Docs</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="releases.html">Releases</a></li>
+                <li><a href="developer.html">Developer/Blog</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="developer-page">
+        <!-- Cover Section -->
+        <div class="cover-section">
+            <div class="cover-overlay"></div>
+        </div>
+
+        <!-- Profile Section -->
+        <div class="profile-section">
+            <div class="profile-container">
+                <img src="Assets/developer.png" alt="Developer" class="profile-image">
+                
+                <div class="profile-info">
+                    <h1 class="profile-name">Emir</h1>
+                    <p class="profile-title">Linux System Administrator | Cybersecurity Researcher</p>
+                    
+                    <div class="profile-description">
+                        <p>
+                            Founder and developer of the Cyrethium project. A system and network administrator, as well as a blue team cybersecurity specialist. 
+                            Someone who improves himself every day. With curiosity and dedication, he is turning his dream of creating his own Linux distribution into reality, step by step. Cyrethium is the result of this growth and determination.
+                        </p>
+                    </div>
+                    
+                    <!-- Social Media Links -->
+                    <div class="social-links">
+                        <a href="https://github.com/cyrethium" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://linkedin.com/in/cyrethium-dev" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://youtube.com/@cyrethium" target="_blank" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                            <span>YouTube</span>
+                        </a>
+                        <a href="https://x.com/cyrethium" target="_blank" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                            <span>X</span>
+                        </a>
+                        <a href="mailto:developer@cyrethium.org" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>Mail</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog Section -->
+        <div class="blog-section">
+            <h2 class="blog-title">Developer Blog</h2>
+            
+            <div class="blog-grid">
+                <div class="blog-card" onclick="openModal('modal1')">
+                    <div class="blog-image" style="background-image: url('Assets/blog.png');"></div>
+                    <div class="blog-content">
+                        <h3 class="blog-card-title">I’ve got nothing to write at the moment…</h3>
+                        <p class="blog-date">00 Month 2025</p>
+                        <p class="blog-excerpt">I currently have no idea what to write here. Send me a question via email.</p>
+                    </div>
+                </div>
+
+                <div class="blog-card" onclick="openModal('modal2')">
+                    <div class="blog-image" style="background-image: url('Assets/blog2.png');"></div>
+                    <div class="blog-content">
+                        <h3 class="blog-card-title">I’ve got nothing to write at the moment…</h3>
+                        <p class="blog-date">00 Month 2025</p>
+                        <p class="blog-excerpt">I currently have no idea what to write here. Send me a question via email.</p>
+                    </div>
+                </div>
+
+                <div class="blog-card" onclick="openModal('modal3')">
+                    <div class="blog-image" style="background-image: url('Assets/blog3.png');"></div>
+                    <div class="blog-content">
+                        <h3 class="blog-card-title">I’ve got nothing to write at the moment…</h3>
+                        <p class="blog-date">00 Month 2025</p>
+                        <p class="blog-excerpt">I currently have no idea what to write here. Send me a question via email.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">I’ve got nothing to write at the moment…</h2>
+                <span class="close" onclick="closeModal('modal1')">&times;</span>
+            </div>
+            <p class="modal-date">00 Month 2025</p>
+            <div class="modal-body">
+                <p>I currently have no idea what to write here. Send me a question via email.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">I’ve got nothing to write at the moment…</h2>
+                <span class="close" onclick="closeModal('modal2')">&times;</span>
+            </div>
+            <p class="modal-date">00 Month 2025</p>
+            <div class="modal-body">
+                <p>I currently have no idea what to write here. Send me a question via email.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">I’ve got nothing to write at the moment…</h2>
+                <span class="close" onclick="closeModal('modal3')">&times;</span>
+            </div>
+            <p class="modal-date">00 Month 2025</p>
+            <div class="modal-body">
+                <p>I currently have no idea what to write here. Send me a question via email.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+    </script>
+       <!-- Footer -->
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="https://github.com/Cyrethium" target="_blank">Github</a>
+            <a href="https://www.linkedin.com/company/securonis-linux/" target="_blank">Linkedin</a>
+            <a href="#" target="_blank">Youtube</a>
+            <a href="https://distrowatch.com/securonis" target="_blank">Distrowatch</a>
+            <a href="https://x.com/root0emir" target="_blank">X</a>
+            <a href="https://discord.gg/GtJ7EgKNEb" target="_blank">Discord</a>
+        </div>
+        <p>&copy; 2025 Cyrethium. All rights reserved. The site is completely open source.</p>
+    </footer>
+</body>
+</html>
