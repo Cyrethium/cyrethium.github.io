@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyrethium News</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Assets/redlogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Video Background -->
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="Assets/news.webm" type="video/webm">
+        </video>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-section">
+                <img src="Assets/logo.png" alt="Cyrethium Logo" class="logo">
+                <span class="logo-text">Cyrethium</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Homepage</a></li>
+                <li><a href="download.html">Download</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="docs.html">Docs</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="news.html" class="active">News</a></li>
+                <li><a href="releases.html">Releases</a></li>
+                <li><a href="developer.html">Developer/Blog</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">Cyrethium News</h1>
+                <p class="hero-subtitle">Latest updates, reviews, development progress, and community highlights</p>
+            </div>
+        </section>
+
+        <!-- News Grid Section -->
+        <section class="news-grid-section">
+            <div class="container">
+                <div class="news-grid">
+                    <!-- News Article 1 - Latest First -->
+                    <div class="news-card feature-box" onclick="openNewsModal('news1')">
+                        <div class="news-image">
+                            <img src="Assets/cyrethiumbanner.png" alt="Cyrethium Announcement">
+                            <div class="news-category">Announcement</div>
+                        </div>
+                        <div class="news-content">
+                            <h3>Root0emir Announces Cyrethium</h3>
+                            <p class="news-excerpt">Project founder Root0Emir announces Securonis's new name as Cyrethium, moving to cyrethium.org domain...</p>
+                            <div class="news-meta">
+                                <span class="news-date"><i class="fas fa-calendar"></i> Aug 23, 2025</span>
+                                <span class="news-author"><i class="fas fa-user"></i> Root0Emir</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- News Article 2 -->
+                    <div class="news-card feature-box" onclick="openNewsModal('news2')">
+                        <div class="news-image">
+                            <img src="Assets/securonis.png" alt="Project Rebranding">
+                            <div class="news-category">Development</div>
+                        </div>
+                        <div class="news-content">
+                            <h3>Securonis Linux Project Name Change</h3>
+                            <p class="news-excerpt">The Securonis Linux project undergoes a name change due to trademark conflicts, GitHub repository archived...</p>
+                            <div class="news-meta">
+                                <span class="news-date"><i class="fas fa-calendar"></i> Aug 10, 2025</span>
+                                <span class="news-author"><i class="fas fa-code"></i> Development</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- News Article 3 -->
+                    <div class="news-card feature-box" onclick="openNewsModal('news3')">
+                        <div class="news-image">
+                            <img src="Assets/world.png" alt="Linux Magazine Interview">
+                            <div class="news-category">Interview</div>
+                        </div>
+                        <div class="news-content">
+                            <h3>Root0Emir Linux Magazine Interview</h3>
+                            <p class="news-excerpt">Linux Magazine features an in-depth interview with Root0Emir about Securonis development and vision...</p>
+                            <div class="news-meta">
+                                <span class="news-date"><i class="fas fa-calendar"></i> Jul 4, 2025</span>
+                                <span class="news-author"><i class="fas fa-newspaper"></i> Linux Magazine</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- News Article 4 -->
+                    <div class="news-card feature-box" onclick="openNewsModal('news4')">
+                        <div class="news-image">
+                            <img src="Assets/security.png" alt="Linux Security Review">
+                            <div class="news-category">Review</div>
+                        </div>
+                        <div class="news-content">
+                            <h3>Linux Security: Securonis Raises Privacy Bar</h3>
+                            <p class="news-excerpt">LinuxSecurity.com reviews Securonis as a significant option for privacy-focused system administrators...</p>
+                            <div class="news-meta">
+                                <span class="news-date"><i class="fas fa-calendar"></i> Jun 24, 2025</span>
+                                <span class="news-author"><i class="fas fa-shield-alt"></i> Linux Security</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- News Article 5 -->
+                    <div class="news-card feature-box" onclick="openNewsModal('news5')">
+                        <div class="news-image">
+                            <img src="Assets/zdnet.png" alt="ZDNet Review">
+                            <div class="news-category">Review</div>
+                        </div>
+                        <div class="news-content">
+                            <h3>ZDNet Reviews Securonis</h3>
+                            <p class="news-excerpt">ZDNet reviews Securonis Linux as an ideal choice for privacy-focused users, highlighting Tor integration...</p>
+                            <div class="news-meta">
+                                <span class="news-date"><i class="fas fa-calendar"></i> Jun 23, 2025</span>
+                                <span class="news-author"><i class="fas fa-newspaper"></i> ZDNet</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- News Article 6 -->
+                    <div class="news-card feature-box" onclick="openNewsModal('news6')">
+                        <div class="news-image">
+                            <img src="Assets/coding.png" alt="Mark Rabideau Review">
+                            <div class="news-category">Review</div>
+                        </div>
+                        <div class="news-content">
+                            <h3>eirenicon Reviews Securonis</h3>
+                            <p class="news-excerpt">Renowned Linux expert Mark Rabideau provides a detailed review of Securonis Linux distribution...</p>
+                            <div class="news-meta">
+                                <span class="news-date"><i class="fas fa-calendar"></i> Jun 19, 2025</span>
+                                <span class="news-author"><i class="fas fa-newspaper"></i> eirenicon</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- News Article 7 -->
+                    <div class="news-card feature-box" onclick="openNewsModal('news7')">
+                        <div class="news-image">
+                            <img src="Assets/coding2.png" alt="Linux Adictos Review">
+                            <div class="news-category">Review</div>
+                        </div>
+                        <div class="news-content">
+                            <h3>Linux Adictos Reviews Securonis</h3>
+                            <p class="news-excerpt">Linux Adictos provides detailed coverage of Securonis, praising its security and anonymity features...</p>
+                            <div class="news-meta">
+                                <span class="news-date"><i class="fas fa-calendar"></i> Jun 13, 2025</span>
+                                <span class="news-author"><i class="fas fa-newspaper"></i> Linux Adictos</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- News Article 8 -->
+                    <div class="news-card feature-box" onclick="openNewsModal('news8')">
+                        <div class="news-image">
+                            <img src="Assets/teknoseyir.png" alt="TeknoSeyir Mention">
+                            <div class="news-category">Media Coverage</div>
+                        </div>
+                        <div class="news-content">
+                            <h3>TeknoSeyir Mentions Securonis</h3>
+                            <p class="news-excerpt">Turkey's largest tech YouTube channel TeknoSeyir mentions Securonis Linux in their weekly tech roundup...</p>
+                            <div class="news-meta">
+                                <span class="news-date"><i class="fas fa-calendar"></i> May 31, 2025</span>
+                                <span class="news-author"><i class="fas fa-newspaper"></i> TeknoSeyir</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- News Article 9 -->
+                    <div class="news-card feature-box" onclick="openNewsModal('news9')">
+                        <div class="news-image">
+                            <img src="Assets/distrowatch.png" alt="Distrowatch Listing">
+                            <div class="news-category">Milestone</div>
+                        </div>
+                        <div class="news-content">
+                            <h3>Securonis Linux Listed on Distrowatch</h3>
+                            <p class="news-excerpt">Securonis Linux gets officially listed on Distrowatch after successful application and waiting period...</p>
+                            <div class="news-meta">
+                                <span class="news-date"><i class="fas fa-calendar"></i> May 23, 2025</span>
+                                <span class="news-author"><i class="fas fa-list"></i> Distrowatch</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="https://github.com" target="_blank">Github</a>
+            <a href="https://linkedin.com" target="_blank">Linkedin</a>
+            <a href="https://youtube.com" target="_blank">Youtube</a>
+            <a href="https://distrowatch.com" target="_blank">Distrowatch</a>
+            <a href="https://x.com" target="_blank">X</a>
+            <a href="https://discord.com" target="_blank">Discord</a>
+        </div>
+        <p>&copy; 2025 Cyrethium. All rights reserved. Your privacy is our priority.</p>
+    </footer>
+
+    <!-- News Modals -->
+    <div id="news1" class="news-modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeNewsModal('news1')">&times;</span>
+            <div class="modal-header">
+                <img src="Assets/cyrethiumbanner.png" alt="Cyrethium Announcement">
+                <div class="modal-category">Announcement</div>
+            </div>
+            <div class="modal-body">
+                <h2>Root0emir Announces Cyrethium</h2>
+                <div class="modal-meta">
+                    <span><i class="fas fa-calendar"></i> August 23, 2025</span>
+                    <span><i class="fas fa-user"></i> Root0Emir</span>
+                </div>
+                <p>Project founder Root0Emir announced Securonis's new name as Cyrethium. The new name was chosen as a unique, unregistered name derived from the combination of "Cyber" and "Ethereum".</p>
+                <p>With the new name, the project officially moved to the cyrethium.org domain. Additionally, Root0Emir announced that regular Warrant Canary publications will be made following Cyrethium's release.</p>
+                <p>Key highlights of the announcement:</p>
+                <ul>
+                    <li>Official transition to cyrethium.org domain</li>
+                    <li>Regular Warrant Canary publications planned</li>
+                    <li>Focus on threat analysis and system attack detection</li>
+                    <li>About 75% of project tools designed from scratch</li>
+                    <li>Development primarily in Python and Bash for easy Linux management</li>
+                </ul>
+                <p>The developed software is analyzed by Claude 4.0 Opus to detect and fix potential security vulnerabilities and performance issues. For existing Securonis users, Cyrethium Lite will be released as a simpler, minimal version with high usability.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="news2" class="news-modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeNewsModal('news2')">&times;</span>
+            <div class="modal-header">
+                <img src="Assets/securonis.png" alt="Project Rebranding">
+                <div class="modal-category">Development</div>
+            </div>
+            <div class="modal-body">
+                <h2>Securonis Linux Project Name Change</h2>
+                <div class="modal-meta">
+                    <span><i class="fas fa-calendar"></i> August 10, 2025</span>
+                    <span><i class="fas fa-code"></i> Development</span>
+                </div>
+                <p>The Securonis Linux project recently underwent a name change, and the GitHub repository was archived during this process.</p>
+                <p>The developer was forced to make the name change due to conflicts with a similar brand. The similarity caused both high copyright risk and SEO problems. Users frequently reported in forums that they couldn't reach the correct sources and had difficulty accessing information due to SEO issues.</p>
+                <p>Reasons for the name change:</p>
+                <ul>
+                    <li>Brand conflict with existing similar names</li>
+                    <li>High copyright and trademark risks</li>
+                    <li>SEO problems affecting user access</li>
+                    <li>User confusion in finding official resources</li>
+                </ul>
+                <p>For these reasons, the project decided to change its name to Cyrethium, ensuring a unique and conflict-free brand identity moving forward.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="news3" class="news-modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeNewsModal('news3')">&times;</span>
+            <div class="modal-header">
+                <img src="Assets/world.png" alt="Linux Magazine Interview">
+                <div class="modal-category">Interview</div>
+            </div>
+            <div class="modal-body">
+                <h2>Root0Emir Linux Magazine Interview</h2>
+                <div class="modal-meta">
+                    <span><i class="fas fa-calendar"></i> July 4, 2025</span>
+                    <span><i class="fas fa-newspaper"></i> Linux Magazine</span>
+                </div>
+                <p>Linux Magazine featured Debian-based Securonis Linux and an interview with the distribution's developer Root0Emir (Emir). Running on the MATE desktop environment, Securonis stands out with its wide range of security and privacy tools.</p>
+                <p>In the interview, Emir discussed his entry into the open-source world and his interest in security-focused Linux distributions. After realizing the lack of tools that met his needs, he decided not only to use existing tools but also to develop his own open-source cybersecurity tools.</p>
+                <p>Interview highlights:</p>
+                <ul>
+                    <li>Securonis menu includes 11 original tools alongside MATE's native tools</li>
+                    <li>Command-line based management tools like Password Manager and System Knight</li>
+                    <li>User-friendly interface combined with advanced security functions</li>
+                    <li>Vision to make Securonis functional for both daily users and privacy-focused professionals</li>
+                </ul>
+                <p>Emir's vision is built on making Securonis a functional platform for both daily users and privacy-focused professionals. This approach makes Securonis stand out not just as a security distribution, but as an innovative project in the open-source world.</p>
+                <div class="modal-source">
+                    <a href="https://www.linux-magazine.com/Issues/2025/298/Security-the-Securonis-Way" target="_blank" class="source-link">
+                        <i class="fas fa-external-link-alt"></i> Read Full Interview on Linux Magazine
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="news4" class="news-modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeNewsModal('news4')">&times;</span>
+            <div class="modal-header">
+                <img src="Assets/security.png" alt="Linux Security Review">
+                <div class="modal-category">Review</div>
+            </div>
+            <div class="modal-body">
+                <h2>Linux Security: Securonis Raises Privacy Bar</h2>
+                <div class="modal-meta">
+                    <span><i class="fas fa-calendar"></i> June 24, 2025</span>
+                    <span><i class="fas fa-shield-alt"></i> Linux Security</span>
+                </div>
+                <p>LinuxSecurity.com thoroughly reviewed Securonis Linux and presented the distribution as an important option for privacy and anonymity-focused system administrators. According to the article, Securonis routes all internet traffic through the Tor network by default, and this approach sets the distribution apart from its competitors.</p>
+                <p>Securonis offers technical flexibility as a Debian Testing-based distribution. However, this also requires users to accept some performance and technical challenges. The system elevates security and privacy to the highest level with built-in tools like DNSCrypt, I2P Router, and FireScorpion browser.</p>
+                <p>Key features highlighted:</p>
+                <ul>
+                    <li>All traffic routed through Tor network by default</li>
+                    <li>Built-in DNSCrypt, I2P Router, and FireScorpion browser</li>
+                    <li>Ideal environment for system administrators, pentesters, journalists, and activists</li>
+                    <li>Live OS testing recommended before installation</li>
+                </ul>
+                <p>While not designed for daily use, Securonis stands out as a noteworthy option for professionals who prioritize privacy and security. LinuxSecurity.com recommends trying it first on live OS to test the tools before installation.</p>
+                <div class="modal-source">
+                    <a href="https://linuxsecurity.com/news/privacy/securonis-raising-the-linux-privacy-bar" target="_blank" class="source-link">
+                        <i class="fas fa-external-link-alt"></i> Read Full Review on LinuxSecurity.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="news5" class="news-modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeNewsModal('news5')">&times;</span>
+            <div class="modal-header">
+                <img src="Assets/zdnet.png" alt="ZDNet Review">
+                <div class="modal-category">Review</div>
+            </div>
+            <div class="modal-body">
+                <h2>ZDNet Reviews Securonis</h2>
+                <div class="modal-meta">
+                    <span><i class="fas fa-calendar"></i> June 23, 2025</span>
+                    <span><i class="fas fa-newspaper"></i> ZDNet</span>
+                </div>
+                <p>ZDNet thoroughly reviewed Securonis Linux and presented the distribution as an ideal choice for privacy-focused users. The article states that Securonis routes all internet traffic through the Tor network, thereby enhancing users' online privacy.</p>
+                <p>Securonis makes users' internet activities anonymous through Tor integration. The distribution routes all traffic through Tor by default, significantly enhancing users' online privacy.</p>
+                <p>Review highlights:</p>
+                <ul>
+                    <li>All internet traffic routed through Tor network</li>
+                    <li>Significant enhancement of online privacy</li>
+                    <li>Anonymous internet activity capabilities</li>
+                    <li>Serious approach to privacy matters</li>
+                </ul>
+                <p>ZDNet praised this feature of Securonis, stating that the distribution takes a serious approach to privacy and has become a new favorite in this field.</p>
+                <div class="modal-source">
+                    <a href="https://www.zdnet.com/article/this-linux-distro-routes-all-your-traffic-through-the-tor-network-and-its-my-new-favorite-for-privacy/" target="_blank" class="source-link">
+                        <i class="fas fa-external-link-alt"></i> Read Full Review on ZDNet
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="news6" class="news-modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeNewsModal('news6')">&times;</span>
+            <div class="modal-header">
+                <img src="Assets/coding.png" alt="Mark Rabideau Review">
+                <div class="modal-category">Review</div>
+            </div>
+            <div class="modal-body">
+                <h2>Mark Rabideau's Securonis Review</h2>
+                <div class="modal-meta">
+                    <span><i class="fas fa-calendar"></i> June 19, 2025</span>
+                    <span><i class="fas fa-user-tie"></i> Mark Rabideau</span>
+                </div>
+                <p>Mark Rabideau, one of the recognized names in the Linux world, thoroughly reviewed Securonis Linux and evaluated the distribution with praise. According to Rabideau, Securonis is not just a security-focused operating system; it's also a fast, lightweight, and impressive platform designed for daily use.</p>
+                <p>Securonis was developed based on Debian Trixie, thus built on a stable foundation. However, what makes the distribution stand out is its privacy and security-focused design. Measures like AppArmor profiles, kernel hardening, secure default settings, and sandboxing are integrated throughout the system.</p>
+                <p>Key review points:</p>
+                <ul>
+                    <li>Doesn't create difficulties for users in daily use</li>
+                    <li>Offers both performant and practical experience through minimal design</li>
+                    <li>Enriches user experience with custom-developed tools and scripts</li>
+                    <li>Thoughtful approach in design: desktop themes, service configurations, and system settings prepared with great care</li>
+                </ul>
+                <p>Mark Rabideau states that Securonis is a young but impressive project and recommends everyone who values digital privacy to try it. The distribution's balanced structure in terms of both performance and security makes it noticeable in the Linux ecosystem.</p>
+                <div class="modal-source">
+                    <a href="https://eirenicon.org/securonis-a-hardened-desktop-for-daily-use/" target="_blank" class="source-link">
+                        <i class="fas fa-external-link-alt"></i> Read Full Review on eirenicon.org
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="news7" class="news-modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeNewsModal('news7')">&times;</span>
+            <div class="modal-header">
+                <img src="Assets/coding2.png" alt="Linux Adictos Review">
+                <div class="modal-category">Review</div>
+            </div>
+            <div class="modal-body">
+                <h2>Linux Adictos Reviews Securonis</h2>
+                <div class="modal-meta">
+                    <span><i class="fas fa-calendar"></i> June 13, 2025</span>
+                    <span><i class="fas fa-globe"></i> Linux Adictos</span>
+                </div>
+                <p>Linux Adictos thoroughly reviewed Securonis and evaluated the distribution with praise. The article emphasizes Securonis's security and anonymity-focused structure, user-friendly interface, and easy installation process.</p>
+                <p>Securonis provides security and anonymity through Tor routing. The distribution includes built-in tools and specialized utilities to enhance user privacy. Additionally, it offers an easy installation and usage experience even for users without advanced knowledge.</p>
+                <p>Review highlights:</p>
+                <ul>
+                    <li>Security and anonymity through Tor routing</li>
+                    <li>Built-in privacy enhancement tools and utilities</li>
+                    <li>Easy installation and usage for all user levels</li>
+                    <li>User-friendly interface design</li>
+                </ul>
+                <p>The article states that Securonis is an ideal choice for users interested in digital privacy and cybersecurity. The distribution stands out as a platform designed for those who don't want to compromise security in daily use.</p>
+                <div class="modal-source">
+                    <a href="https://en.linuxadictos.com/Securonis-protection-and-anonymity-in-an-easy-to-use-distribution.html" target="_blank" class="source-link">
+                        <i class="fas fa-external-link-alt"></i> Read Full Review on Linux Adictos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="news8" class="news-modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeNewsModal('news8')">&times;</span>
+            <div class="modal-header">
+                <img src="Assets/teknoseyir.png" alt="TeknoSeyir Mention">
+                <div class="modal-category">Media Coverage</div>
+            </div>
+            <div class="modal-body">
+                <h2>TeknoSeyir Mentions Securonis</h2>
+                <div class="modal-meta">
+                    <span><i class="fas fa-calendar"></i> May 31, 2025</span>
+                    <span><i class="fas fa-newspaper"></i> TeknoSeyir</span>
+                </div>
+                <p>TeknoSeyir, one of Turkey's largest technology YouTube channels, mentioned Securonis Linux in their weekly agenda evaluation.</p>
+                <p>It was emphasized that Securonis Linux was really a good success and the developer was congratulated.</p>
+                <p>Coverage details:</p>
+                <ul>
+                    <li>Featured in weekly technology roundup</li>
+                    <li>Praised as a genuine success story</li>
+                    <li>Developer recognition and congratulations</li>
+                    <li>Exposure to large Turkish tech audience</li>
+                </ul>
+                <p>This mention on Turkey's premier tech channel provided significant exposure for the Securonis project and helped raise awareness in the Turkish technology community.</p>
+                <div class="modal-source">
+                    <a href="https://youtu.be/VxEZvqrCR-M?si=OgmDDEBLyR6v_ABp&t=2564" target="_blank" class="source-link">
+                        <i class="fas fa-external-link-alt"></i> Watch on TeknoSeyir YouTube
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="news9" class="news-modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeNewsModal('news9')">&times;</span>
+            <div class="modal-header">
+                <img src="Assets/distrowatch.png" alt="Distrowatch Listing">
+                <div class="modal-category">Milestone</div>
+            </div>
+            <div class="modal-body">
+                <h2>Securonis Linux Listed on Distrowatch</h2>
+                <div class="modal-meta">
+                    <span><i class="fas fa-calendar"></i> May 23, 2025</span>
+                    <span><i class="fas fa-list"></i> Distrowatch</span>
+                </div>
+                <p>Securonis Linux had submitted its application to be listed on Distrowatch. After a 3-week wait, it entered the waiting list and was added to the database 4 days later.</p>
+                <p>Distrowatch is one of the most well-known platforms in the Linux world for users to discover different distributions, track their popularity, and stay informed about current developments. Every year, millions of users discover new systems through Distrowatch.</p>
+                <p>Significance of this milestone:</p>
+                <ul>
+                    <li>Global visibility beyond Turkey</li>
+                    <li>Access to millions of Linux users worldwide</li>
+                    <li>Important milestone for international recognition</li>
+                    <li>Path to acceptance as a reliable distribution</li>
+                </ul>
+                <p>Securonis's presence on Distrowatch ensured the project's visibility not only in Turkey but worldwide. In short, the Distrowatch success is just a beginning for Securonis Linux. This step became an important milestone on the path to global recognition and acceptance as a reliable distribution.</p>
+                <div class="modal-source">
+                    <a href="https://distrowatch.com/securonis" target="_blank" class="source-link">
+                        <i class="fas fa-external-link-alt"></i> View Securonis on Distrowatch
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openNewsModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            
+            // Auto scroll to top of modal content
+            setTimeout(() => {
+                const modalContent = modal.querySelector('.modal-content');
+                if (modalContent) {
+                    modalContent.scrollTop = 0;
+                }
+            }, 100);
+        }
+
+        function closeNewsModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('.news-modal');
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
